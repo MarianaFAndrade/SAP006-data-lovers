@@ -40,29 +40,27 @@
           </ul>
         </nav>
       </div>
-
+      <p id="nao-encontrado"></p>
       <select id="caracter-status">
-        <option id="nada-status"></option>
-        <option id="vivo">Dead</option>
-        <option id="morto">Alive</option>
-        <option id="unknown">Unknown</option>
+        <option id="vivo" value="Alive">Alive</option>
+        <option id="morto" value="Dead">Dead</option>
+        <option id="unknown" value="unknown">Unknown</option>
       </select>
 
       <select id="caracter-species">
-        <option id="nada-status" value="Nada"></option>
-        <option id="human" value="Human">Female</option>
-        <option id="alien" value="Alien">Male</option>
+        <option id="human" value="Human">Human</option>
+        <option id="alien" value="Alien">Alien</option>
         <option id="humanoid" value="Humanoid">Humanoid</option>
-        <option id="unknown" value="Unknow">Unknown</option>
+        <option id="unknown" value="unknown">Unknown</option>
       </select>
 
-      <select id="caracter-filter">
-        <option id="nada-filter"></option>
-        <option id="self-aware">Self-aware arm</option>  
+      <select id="caracter-gender">
+        <option id="Male" value="Male">Male</option>
+        <option id="Female" value="Female">Female</option>  
       </select>
       
       <button id="buscar">
-        <span class="material-icons">Filtrar</span>        
+      Filtrar     
       </button>
 
       <div id="linha-vertical"></div>

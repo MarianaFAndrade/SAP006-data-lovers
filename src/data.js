@@ -1,27 +1,26 @@
-export const deadOrAlive = (data, condicao1, condicao2, condicao3, condicao4) => {
-    let filtros = '',
+export const example = () => {
+    return 'example';
+  };
 
-    if (condicao1 === '' && condicao2 === '') {
-        throw TypeError(alert('Insira um filtro válido'));
+// export const filtro = (arr, propriedade, condicao) => {
+//     results.filter(item => item[species] === 'Human')
+// }
 
-    } else if (condicao1 !== '' && condicao2 !== '' && condicao3 !== '' && condicao4 !== '') {
-        filtros = data.results.filter(results => results.status === condicao1 && results.species
-            === condicao2);
-        return filtros;
+// console.log(filtro)
 
-    } else if (condicao1 !== '') {
-        filtros = data.results.filter(results => results.status === condicao1);
-        return filtros
+// filter()
 
-    } else if (condicao2 !== '') {
-        filtros = data.results.filter(results => results.species === condicao2); return filtros
+// const filter = (arr, key, condicao) => {
+//     arr.filter(item => item[key] === condicao)
+//   }
+  
 
-    } else if (condicao3 !== '') {
-        filtros = data.results.filter(results => results.type === condicao3);
-        return filtros
 
-    } else if (condicao4 !== '') {
-        filtros = data.results.filter(results => results.origin === condicao4);
-        return filtros
-    }
-};
+
+// default.sort(function (a, b) {
+	
+// 	return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);
+ 
+// });
+
+//media Reduce se eu precisar somar os arrays ou contador e tirar a media
