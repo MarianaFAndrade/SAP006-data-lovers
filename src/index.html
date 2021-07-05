@@ -40,14 +40,18 @@
           </ul>
         </nav>
       </div>
+
       <p id="nao-encontrado"></p>
+
       <select id="caracter-status">
+        <option id="vazio">Escolha uma opção</option>
         <option id="vivo" value="Alive">Alive</option>
         <option id="morto" value="Dead">Dead</option>
         <option id="unknown" value="unknown">Unknown</option>
       </select>
 
       <select id="caracter-species">
+        <option id="vazio">Escolha uma opção</option>
         <option id="human" value="Human">Human</option>
         <option id="alien" value="Alien">Alien</option>
         <option id="humanoid" value="Humanoid">Humanoid</option>
@@ -55,10 +59,56 @@
       </select>
 
       <select id="caracter-gender">
+        <option id="vazio">Escolha uma opção</option>
         <option id="Male" value="Male">Male</option>
-        <option id="Female" value="Female">Female</option>  
+        <option id="Female" value="Female">Female</option>
+        <option id="Unknown" value="unknown">Unknown</option>
+        <option id="Genderless" value="Genderless">Genderless</option>
+      </select>
+
+      <select id="caracter-origin">
+        <option id="vazio">Escolha uma opção</option>
+        <option id="Earth (C-137)" value="Earth (C-137)">Earth (C-137)</option>
+        <option id="Abadango" value="Abadango">Abadango</option>
+        <option id="Unknown" value="unknown">Unknown</option>
+        <option id="Earth (Replacement Dimension)" value="Earth (Replacement Dimension)">Earth (Replacement Dimension)</option>
+        <option id="Signus 5 Expanse" value="Signus 5 Expanse">Signus 5 Expanse</option>
+        <option id="Post-Apocalyptic Earth" value="Post-Apocalyptic Earth">Post-Apocalyptic Earth</option>
+        <option id="Purge Planet" value="Purge Planet">Purge Planet</option>
+        <option id="Venzenulon 7" value="Venzenulon 7">Venzenulon 7</option>
+        <option id="Bepis 9" value="Bepis 9">Bepis 9</option>
+        <option id="Earth (C-500A)" value="Earth (C-500A)">Earth (C-500A)</option>
+        <option id="Earth (Evil Rick's Target Dimension)" value="Earth (Evil Rick's Target Dimension)">Earth (Evil Rick's Target Dimension)</option>
+        <option id="Nuptia 4" value="Nuptia 4">Nuptia 4</option>
+        <option id="Fantasy World" value="Fantasy World">Fantasy World</option>
+        <option id="Bird World" value="Bird World">Bird World</option>
+        <option id="Post-Apocalyptic Earth" value="Post-Apocalyptic Earth">Post-Apocalyptic Earth</option>
+        <option id="Gromflom Prime" value="Gromflom Prime">Gromflom Prime</option>
+        <option id="Rick's Battery Microverse" value="Rick's Battery Microverse">Rick's Battery Microverse</option>
+        <option id="The Menagerie" value="The Menagerie">The Menagerie</option>
+        <option id="Cronenberg Earth" value="Cronenberg Earth">Cronenberg Earth</option>
+        <option id="Earth (K-83)" value="Earth (K-83)">Earth (K-83)</option>
+        <option id="Hideout Planet" value="Hideout Planet">Hideout Planet</option>
+        <option id="Unity's Planet" value="Unity's Planet">Unity's Planet</option>
+        <option id="Giant's Town" value="Giant's Town">Giant's Town</option>
+        <option id="Anatomy Park" value="Anatomy Park">Anatomy Park</option>
+        <option id="Earth (J19ζ7)" value="Earth (J19ζ7)">Earth (J19ζ7)</option>
+        <option id="Roy: A Life Well Lived" value="Roy: A Life Well Lived">Roy: A Life Well Lived</option>
+        <option id="Eric Stoltz Mask Earth" value="Eric Stoltz Mask Earth">Eric Stoltz Mask Earth</option>
+        <option id="Nuptia 4" value="Nuptia 4">Nuptia 4</option>
+        <option id="Glaagablaaga" value="Glaagablaaga">Glaagablaaga</option>
+        <option id="Gazorpazorp" value="Gazorpazorp">Gazorpazorp</option>
+        <option id="Purge Planet" value="Purge Planet">Purge Planet</option>
+        <option id="Resort Planet" value="Resort Planet">Resort Planet</option>
+        <option id="Hamster in Butt World" value="Hamster in Butt World">Hamster in Butt World</option>
+
       </select>
       
+      <select id="ordenar">
+        <option id="vazio">Escolha uma opção</option>
+        <option id="az" value="az">A-Z</option>
+        <option id="za" value="za">Z-A</option>
+      </select>
       <button id="buscar">
       Filtrar     
       </button>
@@ -69,6 +119,8 @@
       <div id="cards">
          
         <div id="container-card">
+
+          <h3></h3>
            
           <img src="" id="foto-card"></img>
         
@@ -85,6 +137,10 @@
           </span>
 
           <span id="status">
+            <p></p>
+          </span>
+
+          <span id="origin">
             <p></p>
           </span>
 
