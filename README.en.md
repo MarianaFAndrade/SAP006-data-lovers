@@ -54,6 +54,10 @@ To run tests, run the following command
 | Example Color | ![#CCCCCC](https://via.placeholder.com/10/CCCCCC?text=+) #CCCCCC |
 | Example Color | ![#000000](https://via.placeholder.com/10/000000?text=+) #000000 |
 
+## App interface
+![Giphy-app-desktop](https://media.giphy.com/media/GEcneGrlpAEE88BPl3/giphy.gif)
+
+![Giphy-app-mobile](https://media.giphy.com/media/rWaxV4ui5eHO0A8Shu/giphy.gif)
 
 ## 🚀 About Us
 We are building developers front-end, studying at the Laboratória Bootcamp.
