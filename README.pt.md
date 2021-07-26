@@ -58,6 +58,11 @@ Para rodar os testes, usar o comando:
 | Example Color | ![#CCCCCC](https://via.placeholder.com/10/CCCCCC?text=+) #CCCCCC |
 | Example Color | ![#000000](https://via.placeholder.com/10/000000?text=+) #000000 |
 
+## Interface do app
+![Giphy-app-desktop](https://media.giphy.com/media/GEcneGrlpAEE88BPl3/giphy.gif)
+
+![Giphy-app-mobile](https://media.giphy.com/media/rWaxV4ui5eHO0A8Shu/giphy.gif)
+
 
 ## 🚀 Sobre nós
 Somos devas em construção, front-end developers estudando no Bootcamp da Laboratória.
