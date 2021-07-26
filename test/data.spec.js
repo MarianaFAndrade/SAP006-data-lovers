@@ -1,5 +1,5 @@
 import { mockPersonagens, Beth, Morty, Rick, Summer } from '../src/api.js';
-import { ordemAZ, ordemZA, buscarPorLetra, filtrarPersonagens } from '../src/data.js'
+import { ordemAZ, ordemZA, buscarPorLetra, filtrarPersonagens} from '../src/data.js'
 
 describe('Função busca personagens por ordem de A a Z', () => {
   it('should be a function', () => {

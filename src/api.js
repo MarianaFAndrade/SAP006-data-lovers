@@ -25,4 +25,4 @@ export const mockPersonagens = [
     },
 ]
 
-export const [ Beth, Morty, Rick, Summer ] = mockPersonagens;
+export const [ Beth, Morty, Rick, Summer, Alive, Dead, Unknown ] = mockPersonagens;

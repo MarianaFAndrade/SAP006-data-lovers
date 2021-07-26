@@ -3,20 +3,23 @@ import { filtrarPersonagens, ordemAZ, ordemZA, buscarPorLetra } from './data.js'
 import data from "./data/rickandmorty/rickandmorty.js";
 
 const personagens = data.results;
-const ordemPersonagem = data.results.name
 
-const botao = document.getElementById("buscar");
-botao.addEventListener("click", (e) => filtrar(e));
+const filtroByStatus = document.getElementById("caracter-status");
+filtroByStatus.addEventListener("change", (e) => filtrar(e));
+
+const filtroBySpecies = document.getElementById("caracter-species");
+filtroBySpecies.addEventListener("change", (e) => filtrar(e));
+
+const filtroByGender = document.getElementById("caracter-gender");
+filtroByGender.addEventListener("change", (e) => filtrar(e));
 
 const procura = document.getElementById("input-procurar")
-
-
 
 function mostrarCartoes(itens) {
   const cards = document.querySelector("#resultado");
   cards.innerHTML = "";
   
-  const cartoes = itens.map(({ status, species, type, origin, image, name, gender }) =>
+  const cartoes = itens.map(({ status, species, origin, image, name, gender }) =>
         `<div class="flip">
           <div class="card">
             <div class="front-card">
@@ -64,7 +67,7 @@ function ordenarA(e){
 
   mostrarCartoes(filtroAZ);
   
-};
+}
 document.getElementById("btn-desordenar").addEventListener("click", ordenarA);
 
 function ordenarZ(e) {
@@ -72,7 +75,7 @@ function ordenarZ(e) {
   const filtroZA= ordemZA(data.results);
 
   mostrarCartoes(filtroZA);
-};
+}
 document.getElementById("btn-ordenar").addEventListener("click", ordenarZ);
 
 function search(e){
@@ -82,5 +85,5 @@ function search(e){
   const filtroNome = (buscarPorLetra(data.results, pesquisaNome));
 
   mostrarCartoes(filtroNome);
-};
+}
 document.getElementById("btn-procurar").addEventListener("click", search);
