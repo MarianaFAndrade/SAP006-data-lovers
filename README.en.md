@@ -65,8 +65,8 @@ To follow us, just click the links below:
 
 ## 🔗 Links Mariana Andrade
 [![GitHub](https://img.shields.io/badge/my_github-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/MarianaFAndrade)
-[![linkedin](https://img.shields.io/badge/meu_linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mariana-andrade-4a71b8148/)
+[![linkedin](https://img.shields.io/badge/my_linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mariana-andrade-4a71b8148/)
 
 ## 🔗 Links Kamila Moura
 [![GitHub](https://img.shields.io/badge/my_github-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/KamilaMoura1)
-[![linkedin](https://img.shields.io/badge/meu_linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kamila-moura-programacao/)
+[![linkedin](https://img.shields.io/badge/my_linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kamila-moura-programacao/)
