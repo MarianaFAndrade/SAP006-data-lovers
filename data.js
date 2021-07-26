@@ -1,27 +1,17 @@
-export const deadOrAlive = (data, condicao1, condicao2, condicao3, condicao4) => {
-    let filtros = '',
+export const filtrarPersonagens = (personagens, filtroStatus, filtroSpecies, filtroGender) => personagens.filter(function (personagem) {
+  if (
+    personagem.status === filtroStatus ||
+    personagem.species === filtroSpecies ||
+    personagem.gender === filtroGender 
+  ) {
+    return personagem;
+  }
+}); 
 
-    if (condicao1 === '' && condicao2 === '') {
-        throw TypeError(alert('Insira um filtro válido'));
+export const ordemAZ = (data) => data.sort((a, b) => (a.name < b.name) ? - 1 : 1);
 
-    } else if (condicao1 !== '' && condicao2 !== '' && condicao3 !== '' && condicao4 !== '') {
-        filtros = data.results.filter(results => results.status === condicao1 && results.species
-            === condicao2);
-        return filtros;
+export const ordemZA = (data) => data.sort((a, b) => (a.name > b.name) ? - 1 : 1);
 
-    } else if (condicao1 !== '') {
-        filtros = data.results.filter(results => results.status === condicao1);
-        return filtros
-
-    } else if (condicao2 !== '') {
-        filtros = data.results.filter(results => results.species === condicao2); return filtros
-
-    } else if (condicao3 !== '') {
-        filtros = data.results.filter(results => results.type === condicao3);
-        return filtros
-
-    } else if (condicao4 !== '') {
-        filtros = data.results.filter(results => results.origin === condicao4);
-        return filtros
-    }
-};
+export const buscarPorLetra = (data, name) => {
+  return data.filter(results => results.name.toUpperCase().includes(name.toUpperCase()));
+}
