@@ -1,47 +1,89 @@
+import { filtrarPersonagens, ordemAZ, ordemZA, buscarPorLetra } from './data.js';
 
-import { deadOrAlive } from './data.js';
-import data from './data/rickandmorty/rickandmorty.js';;
+import data from "./data/rickandmorty/rickandmorty.js";
 
-botaoPesquisar.getElementById('buscar');
-botao.addEventListener('click', (e) => filtrar(e));
+const personagens = data.results;
 
- const cards = document.querySelector.map('.cards');
- const cartoes = data.results.map(({ status, species, type, origin }) =>
-     `<div id="container-card">
-     <img src="${image}" id="foto-card"></img>
-     </div>
+const filtroByStatus = document.getElementById("caracter-status");
+filtroByStatus.addEventListener("change", (e) => filtrar(e));
 
- <div>
+const filtroBySpecies = document.getElementById("caracter-species");
+filtroBySpecies.addEventListener("change", (e) => filtrar(e));
 
-   <span id="type">
-     <h3>${type}</h3>
-   </span>
-      
-   <span id="species">
-     <p>${species}</p>
-   </span>
+const filtroByGender = document.getElementById("caracter-gender");
+filtroByGender.addEventListener("change", (e) => filtrar(e));
 
-   <span id="status">
-     <p>${status}</p>
-   </span>
+const procura = document.getElementById("input-procurar")
 
- </div>`).join("");
+function mostrarCartoes(itens) {
+  const cards = document.querySelector("#resultado");
+  cards.innerHTML = "";
+  
+  const cartoes = itens.map(({ status, species, origin, image, name, gender }) =>
+        `<div class="flip">
+          <div class="card">
+            <div class="front-card">
+              <div><img  class="image" src="${image}" alt="personagens Rick and Morty"></div>
+              <h3 class="text">${name}</h3>
+            </div>
+            <div class="back-card">
+              <div class="text-back-card>
+                
+                <h3 class="back-title">Origem</h3>
+                <p class="legend">${origin.name}</p>
+                <h3 class="back-title">Status</h3>
+                <p class="legend">${status}</p>
+                <h3 class="back-title">Gênero</h3>
+                <p class="legend">${gender}</p>
+                <h3 class="back-title">Espécie</h3> 
+                <p class="legend">${species}</p> 
+              
+              </div> 
+            </div>
+          </div>
+        </div>`
+    )
+    .join("");
 
- cards.innerHTML += cartoes;
+  document.getElementById("resultado").innerHTML += cartoes;
+}
 
- const filtrar = function (k) {
-     k.preventDefault();
+const filtrar = function (k) {
+  k.preventDefault();
 
-     const filtroStatus = document.getElementById('caracter-status')
-     const opcoesStatus = status.filter.option[filtroStatus.seletor].value;
+  const filtroStatus = document.getElementById("caracter-status").value;
+  const filtroSpecies = document.getElementById("caracter-species").value;
+  const filtroGender = document.getElementById("caracter-gender").value;
+  
+  const personagensFiltrados = filtrarPersonagens(personagens, filtroStatus, filtroSpecies, filtroGender)
 
-     const filtroEspecie = document.getElementById('caracter-species')
-     const opcoesEspecie = species.filer.option[filtroEspecie.seletor].value;
+  mostrarCartoes(personagensFiltrados.slice(0,50));
+};
 
-     const filtroTipo = document.getElementById('caracter-type')
-     const opcoesTipo = type.filer.option[filtroTipo.seletor].value;
 
-     const filtroOrigem = document.getElementById('caracter-filter')
-     const opcoesOrigem = origin.filer.option[filtroOrigem.seletor].value;
- }   
+function ordenarA(e){
+  e.preventDefault();
+  const filtroAZ = ordemAZ(data.results);
 
+  mostrarCartoes(filtroAZ);
+  
+}
+document.getElementById("btn-desordenar").addEventListener("click", ordenarA);
+
+function ordenarZ(e) {
+  e.preventDefault();
+  const filtroZA= ordemZA(data.results);
+
+  mostrarCartoes(filtroZA);
+}
+document.getElementById("btn-ordenar").addEventListener("click", ordenarZ);
+
+function search(e){
+  e.preventDefault();
+
+  const pesquisaNome = procura.value;
+  const filtroNome = (buscarPorLetra(data.results, pesquisaNome));
+
+  mostrarCartoes(filtroNome);
+}
+document.getElementById("btn-procurar").addEventListener("click", search);
